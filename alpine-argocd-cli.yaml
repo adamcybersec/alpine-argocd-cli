@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: alpine-argocd-cli
+  namespace: argocd
+spec:
+  containers:
+  - name: alpine-argocd-cli
+    image: ghcr.io/adamroddick/alpine-argocd-cli:main
+    resources:
+      requests:
+        memory: 64Mi
+        cpu: 100m
+      limits:
+        memory: 128Mi
+        cpu: 200m
